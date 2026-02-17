@@ -53,13 +53,13 @@ class _SignupPageState extends State<SignupPage> {
                 CupertinoButton(
                     padding: EdgeInsets.zero,
                     child: Text('Sign Up'), onPressed: (){
-                      setState(() {
-                        box.put("username", _username.text.trim());
-                        box.put("password", _password.text.trim());
-                        box.put("biometrics", false);
-                        _password.text = "";
-                        Navigator.pushReplacement(context, CupertinoPageRoute(builder: (context)=> LoginPage()));
-                      });
+                  setState(() {
+                    box.put("username", _username.text.trim());
+                    box.put("password", _password.text.trim());
+                    box.put("biometrics", false);
+                    _password.text = "";
+                    Navigator.pushReplacement(context, CupertinoPageRoute(builder: (context)=> LoginPage()));
+                  });
                 }),
 
               ],

@@ -14,17 +14,17 @@ class _SettingsState extends State<Settings> {
   final box = Hive.box("database");
   Widget tiles(dynamic trailing, String title, Color color, IconData icon, String additionalInfo){
     return CupertinoListTile(
-        title: Text(title),
-        additionalInfo: Text(additionalInfo),
-        trailing: trailing,
-        leading: Container(
+      title: Text(title),
+      additionalInfo: Text(additionalInfo),
+      trailing: trailing,
+      leading: Container(
         padding: EdgeInsets.all(4),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-          color: color
+            borderRadius: BorderRadius.circular(8),
+            color: color
         ),
         child: Icon(icon, size: 17,),
-    ),
+      ),
     );
   }
   @override
@@ -55,7 +55,7 @@ class _SettingsState extends State<Settings> {
                     );
                   });
                 },
-                
+
                 child: tiles(Icon(CupertinoIcons.chevron_forward), "Sign out", CupertinoColors.systemPurple, Icons.logout, box.get("username")))
           ],
         )

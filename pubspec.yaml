@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.10.3
+  sdk: ^3.10.7
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -34,23 +34,36 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  hive_flutter: ^1.1.0
+  webview_flutter: ^4.13.1
+  http: ^1.6.0
   hive: ^2.2.3
+  hive_flutter: ^1.1.0
   local_auth: ^3.0.0
-
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.14.4
+  flutter_launcher_icons: "^0.14.4"
+flutter_lints: ^2.0.0 # Note: lints should be here too
+
+# This must be at the very edge (root level), NOT inside dev_dependencies
 flutter_launcher_icons:
-  android: true
+  android: "launcher_icon"
   ios: true
-  image_path: "assets/gigafy.png"
+  image_path: "assets/todo.jpg"
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "assets/todo.jpg"
+    background_color: "#2E86AB" # Changed from #hexcode
+    theme_color: "#2E86AB"      # Changed from #hexcode
   windows:
     generate: true
-    image_path: "assets/gigafy.png"
+    image_path: "assets/todo.jpg"
     icon_size: 48
+  macos:
+    generate: true
+    image_path: "assets/todo.jpg"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
